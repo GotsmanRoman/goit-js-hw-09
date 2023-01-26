@@ -83,7 +83,7 @@ function checkNegativeDelta(deltaMs) {
 }
 function resetTimer() {
   isTimerOn = false;
-  refs.startBtn.removeAttribute('disabled');
+
   refs.timePicker.removeAttribute('disabled');
   clearInterval(intervalId);
   refs.spans.forEach(elem => {

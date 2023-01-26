@@ -40,13 +40,14 @@ input {
 input:hover {
   border: 1px solid #555555;
 }
-button {
+button[data-reset],
+button[data-start] {
   width: 100px;
   padding: 10px;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2;
-  background-color: rgb(255, 209, 5);
+
   border: none;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -59,6 +60,10 @@ button[data-reset] {
 }
 button[data-reset]:hover {
   background-color: #0590a8;
+  color: #ffffff;
+}
+button[data-start] {
+  background-color: rgb(255, 209, 5);
 }
 button:hover {
   background-color: rgb(29, 172, 0);
