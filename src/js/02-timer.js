@@ -99,7 +99,7 @@ const timerVar = function fillTimer() {
     return;
   }
   const resultObj = convertMs(deltaMs);
-  for (elem in resultObj) {
+  for (let elem in resultObj) {
     const formattedValue = addLeadingZero(resultObj[elem]);
     document.querySelector(`[data-${elem}]`).textContent = formattedValue;
   }
