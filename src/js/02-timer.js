@@ -1,6 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 
 const refs = {
   timePicker: document.querySelector('#datetime-picker'),
@@ -25,16 +25,19 @@ const options = {
     checkNegativeDelta(calcDelta());
   },
 };
-Notiflix.Notify.init({
-  width: '280px',
-  position: 'center-top', // 'right-top' - 'right-bottom' - 'left-top' - 'left-bottom' - 'center-top' - 'center-bottom' - 'center-center'
-  distance: '100px',
-  clickToClose: true,
-});
-function showError(valueToFade = '2000') {
-  Notiflix.Notify.failure('Please choose a date in the future', {
-    timeout: valueToFade,
-  });
+// Notiflix.Notify.init({
+//   width: '280px',
+//   position: 'center-top', // 'right-top' - 'right-bottom' - 'left-top' - 'left-bottom' - 'center-top' - 'center-bottom' - 'center-center'
+//   distance: '100px',
+//   clickToClose: true,
+// });
+// function showError(valueToFade = '2000') {
+//   Notiflix.Notify.failure('Please choose a date in the future', {
+//     timeout: valueToFade,
+//   });
+// }
+function showError(){
+  console.log("Please choose a date in the future");
 }
 
 const getFutureDate = flatpickr(refs.timePicker, options);
