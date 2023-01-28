@@ -1,13 +1,17 @@
 const refs = {
   startBtn: document.querySelector('button[data-start]'),
   stopBtn: document.querySelector('button[data-stop]'),
+  hexField: document.querySelector(".container__hex"),
   body: document.querySelector('body'),
 };
 let intervalId = null;
 const INTERVAL_TIMER = 1000;
+refs.hexField.textContent = refs.body.style.backgroundColor;
+
 
 const colorResult = function setRandomBgColor() {
   refs.body.style.backgroundColor = getRandomHexColor();
+  refs.hexField.textContent = getRandomHexColor();
 };
 
 function getRandomHexColor() {
