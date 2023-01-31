@@ -11,6 +11,11 @@ function showError(message, valueToFade = '2000') {
     timeout: valueToFade,
   });
 }
+function showSuccess(message, valueToFade = '2000') {
+  Notiflix.Notify.success(message, {
+    timeout: valueToFade,
+  });
+}
 
 const refs = {
   submitBtn: document.querySelector('button'),
@@ -37,7 +42,7 @@ function createPromise(position, delay) {
 
 function successPromise({ position, delay }) {
   //console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
-  showError(`✅ Fulfilled promise ${position} in ${delay}ms`);
+  showSuccess(`✅ Fulfilled promise ${position} in ${delay}ms`);
 }
 function errorPromise({ position, delay }) {
   //console.log(`❌ Rejected promise ${position} in ${delay}ms`);
